@@ -8,6 +8,7 @@ public class chunk : MonoBehaviour
     {
         gameObject.SetActive(true);
         return this;
+     
     }
     public chunk hidechunk()
     {
