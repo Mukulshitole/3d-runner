@@ -1,5 +1,6 @@
 ﻿ using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
@@ -8,11 +9,15 @@ public class InputManager : MonoBehaviour
     private static InputManager instance;
     public static InputManager Instance { get { return instance; } }
 
-    
+
+    // action schemas
+    private RunnerInputAction actionScheme;
+    // configuration 
+    [SerializeField] private float sqrSwipeDeadzone = 50.0f;
 
     #region public properties
-    private bool Tap { get { return tap;} }
-    public Vector2 TouchPosition { get { return TouchPosition; } }
+    public bool Tap { get { return tap;} }
+    public Vector2 TouchPosition { get { return touchposition; } }
     public bool SwipeLeft { get { return swipeLeft; } }
     public bool SwipeRight{ get { return swipeRight; } }
     public bool Swipeup{ get { return swipeup; } }
@@ -30,13 +35,19 @@ public class InputManager : MonoBehaviour
     private bool swipedown;
     #endregion
 
-    // action schemas
-    private RunnerInputAction actionScheme;
     private void Awake()
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
         SetupControl();
+    }
+    private void LateUpdate()
+    {
+        ResetInputs();
+    }
+    private void ResetInputs()
+    {
+        tap = swipedown = swipeLeft = swipeRight = swipeup = false;
     }
     private void SetupControl()
     {
@@ -51,19 +62,45 @@ public class InputManager : MonoBehaviour
     }
     private void OnEnddrag(InputAction.CallbackContext ctx)
     {
-        throw new NotImplementedException();
+        Vector2 delta = touchposition - startDrag;
+        float sqrDistance = delta.sqrMagnitude;
+
+        // Confirmed swipe
+        if (sqrDistance > sqrSwipeDeadzone)
+        {
+            float x = Mathf.Abs(delta.x);
+            float y = Mathf.Abs(delta.y);
+
+            if (x > y) // Left or Right
+            {
+                if (delta.x > 0)
+                    swipeRight = true;
+                else
+                    swipeLeft = true;
+            }
+            else // Up or Down
+            {
+                if (delta.y > 0)
+                    swipeup = true;
+                else
+                    swipedown = true;
+            }
+        }
+
+        startDrag = Vector2.zero;
+
     }
     private void OnStartdrag(InputAction.CallbackContext ctx)
     {
-        throw new NotImplementedException();
+        startDrag = touchposition;
     }
     private void OnPosition(InputAction.CallbackContext ctx)
     {
-        throw new NotImplementedException();
+        touchposition = ctx.ReadValue<Vector2>();
     }
     private void OnTap(InputAction.CallbackContext ctx)
     {
-        throw new NotImplementedException();
+        tap = true;
     }
 
     public void OnEnable()

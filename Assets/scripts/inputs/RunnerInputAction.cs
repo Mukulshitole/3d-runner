@@ -32,7 +32,7 @@ public class @RunnerInputAction : IInputActionCollection, IDisposable
                     ""id"": ""81d51bf0-a8ca-469b-a563-41c92d1d7253"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""interactions"": ""Press""
+                    ""interactions"": """"
                 },
                 {
                     ""name"": ""Startdrag"",

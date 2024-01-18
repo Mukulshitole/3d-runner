@@ -9,7 +9,8 @@ public class Runningstate : Basestate
     public override Vector3 ProcessMotion()
     {
         Vector3 m = Vector3.zero;
-        m.x = 0f;
+
+        m.x = motor.SnapToLane();
         m.y = -1.0f; // is in air
         m.z = motor.baseRunspeed;  //speed
         return m;

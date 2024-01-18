@@ -9,9 +9,9 @@ public class Playermotor : MonoBehaviour
     [HideInInspector] public bool isGrounded;
     [HideInInspector] public int currentLane; // -1 0 1
 
-    public float distanceiInbetweenlanes = 3.0f;
+    public float distanceInBetweenLanes = 3.0f;
     public float baseRunspeed = 5.0f;
-    public float basesidewaspeed = 5.0f;
+    public float baseSidewaySpeed = 10.0f;
     public float gravity = 14.0f;
     public float terminalvelocity = 20.0f;
 
@@ -47,7 +47,29 @@ public class Playermotor : MonoBehaviour
         controller.Move(movevector * Time.deltaTime);
 
     }
-     
+    public float SnapToLane()
+    {
+        float r = 0.0f;
+
+        // If we're not directly on top of a lane
+        if (transform.position.x != (currentLane * distanceInBetweenLanes))
+        {
+            float deltaToDesiredPosition = (currentLane * distanceInBetweenLanes) - transform.position.x;
+            r = (deltaToDesiredPosition > 0) ? 1 : -1;
+            r *= baseSidewaySpeed;
+
+            float actualDistance = r * Time.deltaTime;
+            if (Mathf.Abs(actualDistance) > Mathf.Abs(deltaToDesiredPosition))
+                r = deltaToDesiredPosition * (1 / Time.deltaTime);
+        }
+        else
+        {
+            r = 0;
+        }
+
+        return r;
+    }
+
     public void ChangeLane(int direction)
     {
         currentLane = Mathf.Clamp(currentLane + direction, -1, 1);
