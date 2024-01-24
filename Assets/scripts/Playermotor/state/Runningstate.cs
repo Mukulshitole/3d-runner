@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Runningstate : Basestate
 {
-   
-    
+    public override void Construct()
+    {
+        motor.verticalVelocity = 0;
+    }
+
     public override Vector3 ProcessMotion()
     {
         Vector3 m = Vector3.zero;
@@ -32,7 +35,12 @@ public class Runningstate : Basestate
         if (InputManager.Instance.Swipeup  && motor.isGrounded)
         {
             // change lane go jump
-            //motor.changestate(GetComponent<jumpingState>())
+            motor.changestate(GetComponent<Jumpingstate>());
         }
+        if (!motor.isGrounded)
+            motor.changestate(GetComponent<Fallingstate>());
+
+        if (InputManager.Instance.Swipedown)
+            motor.changestate(GetComponent<Slidingstate>());
     }
 }
