@@ -16,12 +16,14 @@ public class Playermotor : MonoBehaviour
     public float terminalvelocity = 20.0f;
 
     public CharacterController controller;
+    public Animator anim;
 
     private Basestate state;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponent<Animator>();
         state = GetComponent<Runningstate>();
         state.Construct();
     }
@@ -43,6 +45,9 @@ public class Playermotor : MonoBehaviour
         // means are we swipping up or down while walking 
         state.Transation();
 
+        // feed your animator 
+        anim?.SetBool("IsGrounded", isGrounded);
+        anim?.SetFloat("Speed",Mathf.Abs(movevector.z));
         // move the player
         controller.Move(movevector * Time.deltaTime);
 

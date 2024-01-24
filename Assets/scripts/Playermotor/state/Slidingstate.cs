@@ -12,6 +12,7 @@ public class Slidingstate : Basestate
 
     public override void Construct()
     {
+        motor.anim?.SetTrigger("Slide");
         slidestart = Time.time;
         // as the player slides we have to reduce its collider height and 
         initialsize = motor.controller.height; 
@@ -22,6 +23,7 @@ public class Slidingstate : Basestate
     }
     public override void Destruct()
     {
+        motor.anim?.SetTrigger("Running");
         motor.controller.height = initialsize ;
         motor.controller.center = initalcenter ;
     }

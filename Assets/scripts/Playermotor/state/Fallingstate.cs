@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Fallingstate : Basestate
 {
+    public override void Construct()
+    {
+        motor.anim?.SetTrigger("Fall");
+    }
     public override Vector3 ProcessMotion()
     {
         // apply gravity 

@@ -7,12 +7,13 @@ public class Jumpingstate : Basestate
     public float jumpForce = 7.0f;
     public override void Construct()
     {
-        motor.verticalVelocity = jumpForce; 
+        motor.verticalVelocity = jumpForce;
+        motor.anim?.SetTrigger("Jump");
     }
 
     public override Vector3 ProcessMotion()
     {
-        // apply gravity 
+         // apply gravity 
         motor.ApplyGravity();
 
         // create our return vector
