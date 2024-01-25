@@ -704,6 +704,7 @@ MonoBehaviour:
   gravity: 14
   terminalvelocity: 20
   controller: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!143 &1095280628
 CharacterController:
   m_ObjectHideFlags: 0
@@ -746,7 +747,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26165f2753a0c3548aa3b13ffa5763e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7
+  jumpForce: 15
 --- !u!4 &1095280631 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400068, guid: 095f379f461e4554c8999ccdc9f2e131,
