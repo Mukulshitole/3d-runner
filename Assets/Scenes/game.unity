@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -294,7 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1095280631}
   material: {fileID: 2100000, guid: fa5d3a00ed33c164186c4d758f8134fc, type: 2}
-  offsetspeed: 0.25
+  offsetspeed: 0.2
 --- !u!1 &366781756
 GameObject:
   m_ObjectHideFlags: 0
