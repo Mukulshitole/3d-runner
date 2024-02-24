@@ -19,6 +19,7 @@ public class Playermotor : MonoBehaviour
     public Animator anim;
 
     private Basestate state;
+    private bool isPaused;
 
     private void Start()
     {
@@ -26,10 +27,12 @@ public class Playermotor : MonoBehaviour
         anim = GetComponent<Animator>();
         state = GetComponent<Runningstate>();
         state.Construct();
+        isPaused = true;
     }
 
     private void Update()
     {
+      if(!isPaused)
         updateMotor();
     }
 

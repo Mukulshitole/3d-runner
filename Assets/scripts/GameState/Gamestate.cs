@@ -17,7 +17,7 @@ public abstract class Gamestate : MonoBehaviour
     {
 
     }
-    public virtual void UpdateStatet()
+    public virtual void UpdateState()
     {
 
     }

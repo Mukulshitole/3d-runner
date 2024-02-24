@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: 095f379f461e4554c8999ccdc9f2e131, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.27
+      value: 0.091
       objectReference: {fileID: 0}
     - target: {fileID: 400068, guid: 095f379f461e4554c8999ccdc9f2e131, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1123,6 +1123,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1237322721}
   - component: {fileID: 1237322722}
+  - component: {fileID: 1237322723}
   m_Layer: 0
   m_Name: Gamemanager
   m_TagString: Untagged
@@ -1154,6 +1155,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e03c87f05b33e94ba26e8fff4079ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1237322723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1237322720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bc56882fa66364bb686412968b7a90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1283423734
