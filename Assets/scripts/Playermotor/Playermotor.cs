@@ -98,4 +98,19 @@ public class Playermotor : MonoBehaviour
         if (verticalVelocity < -terminalvelocity)
             verticalVelocity = -terminalvelocity;
     }
+
+    public void PausePlayer()
+    {
+        isPaused = true;
+    }
+
+    public void ResumePlayer()
+    {
+        isPaused = false;
+    }
+
+    public void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer);
+    }
 }

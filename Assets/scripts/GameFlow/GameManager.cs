@@ -3,8 +3,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get { return Instance; } }
+    public static GameManager Instance { get { return instance; } }
     private static GameManager instance;
+    public Playermotor motor;
 
     private Gamestate state;
     private void Awake()
