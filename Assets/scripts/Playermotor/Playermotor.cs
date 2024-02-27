@@ -108,6 +108,10 @@ public class Playermotor : MonoBehaviour
     {
         isPaused = false;
     }
+    public void RespawnPlayer()
+    {
+       changestate(GetComponent<RespawnState>());
+    }
 
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {

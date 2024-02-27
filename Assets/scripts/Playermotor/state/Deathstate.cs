@@ -5,7 +5,7 @@ public class Deathstate : Basestate
     [SerializeField] private Vector3 knockbackForce = new Vector3(0, 4, -3);
     public override void Construct()
     {
-        //Gamemanager.instance.changestate(Gamemanager.instance.getcomponent<gamestatedeath>());
+        motor.anim?.SetTrigger("Death");
     }
     //public override Vector3 ProcessMotion()
     //{
@@ -24,7 +24,7 @@ public class Deathstate : Basestate
         if(knockbackForce.z>0)
         {
             knockbackForce.z = 0;
-        //    GameManager.Instance.Changestate(GameManager.Instance.GetComponent<GameStateDearh>());
+            GameManager.Instance.Changestate(GameManager.Instance.GetComponent<GameStateDeath>());
         }
 
      
