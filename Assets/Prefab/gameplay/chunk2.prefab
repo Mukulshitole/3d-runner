@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block
       objectReference: {fileID: 0}
+    - target: {fileID: 7469653932478441345, guid: aaef4b1020fc2844991e28b4ac6dd545,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7469653932478675873, guid: aaef4b1020fc2844991e28b4ac6dd545,
         type: 3}
       propertyPath: m_RootOrder

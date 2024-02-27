@@ -112,5 +112,8 @@ public class Playermotor : MonoBehaviour
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer);
+
+        if (hitLayerName == "Death")
+            changestate(GetComponent<Deathstate>());
     }
 }

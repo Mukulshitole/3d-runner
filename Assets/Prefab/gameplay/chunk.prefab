@@ -60,6 +60,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Block (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7469653932478441345, guid: aaef4b1020fc2844991e28b4ac6dd545,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7469653932478675873, guid: aaef4b1020fc2844991e28b4ac6dd545,
         type: 3}
       propertyPath: m_RootOrder
@@ -139,6 +144,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blocker
+      objectReference: {fileID: 0}
+    - target: {fileID: 8894836510239509716, guid: 69c7945fcf5feb344a9355472c1efa37,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8894836510240002292, guid: 69c7945fcf5feb344a9355472c1efa37,
         type: 3}
@@ -379,6 +389,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469653932478441345, guid: aaef4b1020fc2844991e28b4ac6dd545,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7469653932478675873, guid: aaef4b1020fc2844991e28b4ac6dd545,
         type: 3}
