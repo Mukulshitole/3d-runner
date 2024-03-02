@@ -21,17 +21,17 @@ public class RespawnState : Basestate
     }
     public override Vector3 ProcessMotion()
     {
-        // Apply gravity 
+        // apply gravity 
         motor.ApplyGravity();
-         // create our return vector 
 
+        // create our return vector
         Vector3 m = Vector3.zero;
 
         m.x = motor.SnapToLane();
-        m.y = -1.0f; // is in air
+        m.y = motor.verticalVelocity;
         m.z = motor.baseRunspeed;  //speed
         return m;
-    }
+    }  
     public override void Transation()
     {
         if (motor.isGrounded && (Time.time - startTime)> immunityTime) // from here we can pull a transation

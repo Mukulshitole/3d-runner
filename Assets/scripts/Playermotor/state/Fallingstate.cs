@@ -25,5 +25,6 @@ public class Fallingstate : Basestate
     {
         if (motor.isGrounded)
             motor.changestate(GetComponent<Runningstate>());
+
     }
 }
