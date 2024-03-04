@@ -21,6 +21,11 @@ public class RespawnState : Basestate
 
         
     }
+
+    public override void Destruct()
+    {
+        GameManager.Instance.ChangeCamera(GameCamera.Game);
+    }
     public override Vector3 ProcessMotion()
     {
         // apply gravity 
