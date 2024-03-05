@@ -116,7 +116,7 @@ public class Playermotor : MonoBehaviour
 
     public void ResetPlayer()
     {
-       
+        currentLane = 0;
        transform.position = Vector3.zero;
        anim?.SetTrigger("Idle");
        changestate(GameManager.Instance.motor.GetComponent<Runningstate>());
