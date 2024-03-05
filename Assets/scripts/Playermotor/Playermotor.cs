@@ -114,6 +114,16 @@ public class Playermotor : MonoBehaviour
         GameManager.Instance.ChangeCamera(GameCamera.Respawn);
     }
 
+    public void ResetPlayer()
+    {
+       
+       transform.position = Vector3.zero;
+       anim?.SetTrigger("Idle");
+       changestate(GameManager.Instance.motor.GetComponent<Runningstate>());
+       PausePlayer();
+
+    }
+
     public void OnControllerColliderHit(ControllerColliderHit hit)
     {
         string hitLayerName = LayerMask.LayerToName(hit.gameObject.layer);

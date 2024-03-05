@@ -1477,6 +1477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   motor: {fileID: 1095280627}
+  worldgeneration: {fileID: 1788433593}
+  ScenceChunkGeneration: {fileID: 1788433595}
   cameras:
   - {fileID: 1558344799}
   - {fileID: 1342791294}

@@ -42,7 +42,7 @@ public class worldgeneration : MonoBehaviour
     {
         scanposition();
     }
-    private void scanposition()
+    public void scanposition()
     {
         // if our camera goes beyond a certain point then we spawn new chunk 
         float cameraZ = cameraTransform.position.z;

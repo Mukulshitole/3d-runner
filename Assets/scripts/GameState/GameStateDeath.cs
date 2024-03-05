@@ -26,8 +26,8 @@ public class GameStateDeath : Gamestate
     public void ToMenu()
     {
         brain.Changestate(GetComponent<Gamestateinitilaiz>());
-        GameManager.Instance.motor.transform.position = Vector3.zero;
-        GameManager.Instance.motor.anim?.SetTrigger("Idle");
-        GameManager.Instance.motor.changestate(GameManager.Instance.motor.GetComponent<Runningstate>());
+
+        GameManager.Instance.motor.ResetPlayer();
+        GameManager.Instance.worldgeneration.Resetworld();
     }
 }

@@ -14,7 +14,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get { return instance; } }
     private static GameManager instance;
     public Playermotor motor;
+    public worldgeneration worldgeneration;  
+    public ScenceChunkGeneration ScenceChunkGeneration;
     public GameObject[] cameras;
+ 
 
     private Gamestate state;
     private void Awake()
