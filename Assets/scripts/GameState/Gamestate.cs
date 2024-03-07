@@ -13,7 +13,7 @@ public abstract class Gamestate : MonoBehaviour
         Debug.Log("constructing :" + this.ToString());
     }
 
-    public void Destruct()
+    public virtual void Destruct()
     {
 
     }
