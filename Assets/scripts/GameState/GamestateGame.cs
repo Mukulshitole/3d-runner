@@ -10,6 +10,10 @@ public class GamestateGame : Gamestate
         base.Construct();
         GameManager.Instance.motor.ResumePlayer();
         GameManager.Instance.ChangeCamera(GameCamera.Game);
+
+        fishcount.text = "xTBD";
+        Scorecount.text = "xTBD";
+
         gameui.SetActive(true);
     }
     public override void Destruct()
