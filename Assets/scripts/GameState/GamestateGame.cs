@@ -13,6 +13,7 @@ public class GamestateGame : Gamestate
 
         fishcount.text = "xTBD";
         Scorecount.text = "xTBD";
+        //7hr 48min
 
         gameui.SetActive(true);
     }
