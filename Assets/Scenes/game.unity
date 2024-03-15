@@ -5379,17 +5379,17 @@ PrefabInstance:
     - target: {fileID: 4773801166486267318, guid: f521c6cfc99888a40a4b4721753a594d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.56
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773801166486267318, guid: f521c6cfc99888a40a4b4721753a594d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4773801166486267318, guid: f521c6cfc99888a40a4b4721753a594d,
         type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773801166486267318, guid: f521c6cfc99888a40a4b4721753a594d,
+        type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.72
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4773801166486267318, guid: f521c6cfc99888a40a4b4721753a594d,
         type: 3}
@@ -5430,21 +5430,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FishCollectable
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773801166983856230, guid: f521c6cfc99888a40a4b4721753a594d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773801166983856230, guid: f521c6cfc99888a40a4b4721753a594d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4773801166983856230, guid: f521c6cfc99888a40a4b4721753a594d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f521c6cfc99888a40a4b4721753a594d, type: 3}
