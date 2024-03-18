@@ -26,6 +26,7 @@ public class Gamestateinitilaiz : Gamestate
     public void OnPlayClick()
     {
         brain.Changestate(GetComponent<GamestateGame>());
+        Gamestats.Instance.ResetSession();
 
     }
 
