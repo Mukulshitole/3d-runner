@@ -60,5 +60,15 @@ public class Gamestats : MonoBehaviour
         OnCollectFish?.Invoke(fishCollectedThisSession);
         OnscoreChange?.Invoke(score);
     }
+
+    public string ScoreToText()
+    {
+        return score.ToString("000000");
+    }
+
+    public string FishToText()
+    {
+        return fishCollectedThisSession.ToString("000");
+    }
 }
  

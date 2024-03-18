@@ -11,15 +11,30 @@ public class GamestateGame : Gamestate
         GameManager.Instance.motor.ResumePlayer();
         GameManager.Instance.ChangeCamera(GameCamera.Game);
 
-        fishcount.text = "xTBD";
-        Scorecount.text = "xTBD";
+        Gamestats.Instance.OnCollectFish += OnCollectFish;
+        Gamestats.Instance.OnscoreChange += OnScoreChange;
+
+       
         //7hr 48min
 
         gameui.SetActive(true);
     }
+    private void OnCollectFish(int amnCollected)
+    {
+        fishcount.text = Gamestats.Instance.FishToText();
+       
+    }
+
+    private void OnScoreChange(float score)
+    {
+        Scorecount.text = Gamestats.Instance.ScoreToText();
+    }
     public override void Destruct()
     {
         gameui.SetActive(false);
+        Gamestats.Instance.OnCollectFish -= OnCollectFish;
+        Gamestats.Instance.OnscoreChange -= OnScoreChange;
+
     }
 
 
@@ -28,4 +43,6 @@ public class GamestateGame : Gamestate
         GameManager.Instance.worldgeneration.scanposition();
         GameManager.Instance.ScenceChunkGeneration.scanposition();
     }
+
+  
 }
