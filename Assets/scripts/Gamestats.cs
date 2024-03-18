@@ -12,7 +12,7 @@ public class Gamestats : MonoBehaviour
     //Fish
     public int totalFish;
     public int fishCollectedThisSession;
-    public float pointPerFish;
+    public float pointPerFish = 10.0f;
 
     //Internal cooldown
     private float lastScoreUpdate;

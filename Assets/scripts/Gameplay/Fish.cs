@@ -19,6 +19,7 @@ public class Fish : MonoBehaviour
     {
         anim?.SetTrigger("Pickup");
         // Increment the fish counter
+        Gamestats.Instance.CollectFish();
         // INcrement the score
         // play sfx
         // trigger a animation 
